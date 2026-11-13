@@ -1,0 +1,11 @@
+SPARK 4.3.0
+>>> SELECT t, c, counter_diff(c) OVER (ORDER BY t) AS delta FROM VALUES
+     2026-01-01 00:00:00 | 100 | None
+     2026-01-01 00:01:00 | 130 | 30
+     2026-01-01 00:02:00 | 190 | 60
+>>> SELECT collect_union(col) FROM VALUES (array(1,2)), (array(2,3)), (array(1)) AS tab(col)
+     [1, 2, 3]
+>>> SELECT jaro_winkler_similarity('MARTHA', 'MARHTA')
+     0.9611111111111111
+>>> SELECT to_base32(CAST('spark' AS BINARY)),
+     ONYGC4TL | spark

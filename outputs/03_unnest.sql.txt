@@ -1,0 +1,12 @@
+SPARK 4.3.0
+>>> SELECT * FROM UNNEST(array('a','b')) WITH ORDINALITY AS t(value, pos)
+     a | 1
+     b | 2
+>>> SELECT * FROM UNNEST(array(1,2), array(10,20,30)) AS t(a, b)
+     1 | 10
+     2 | 20
+     None | 30
+>>> SELECT id, elem
+     1 | 10
+     1 | 20
+     2 | 30

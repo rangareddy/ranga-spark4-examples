@@ -1,0 +1,10 @@
+SPARK 4.0.5
+>>> SELECT 'Apple' = 'apple'
+     False
+>>> SELECT 'Apple' COLLATE UTF8_LCASE = 'apple'
+     True
+>>> SELECT collation('x' COLLATE UNICODE_CI)
+     SYSTEM.BUILTIN.UNICODE_CI
+>>> CREATE OR REPLACE TEMP VIEW names AS SELECT * FROM VALUES ('Ana'),('ana'),('ANA'),('Bob') AS t(n)
+>>> SELECT count(DISTINCT n COLLATE UTF8_LCASE) FROM names
+     2

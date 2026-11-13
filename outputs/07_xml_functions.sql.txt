@@ -1,0 +1,5 @@
+SPARK 4.0.5
+>>> SELECT from_xml('<p><name>Ana</name><age>30</age></p>', 'name STRING, age INT')
+     Row(name='Ana', age=30)
+>>> SELECT schema_of_xml('<p><name>Ana</name><age>30</age></p>')
+     STRUCT<age: BIGINT, name: STRING>

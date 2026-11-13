@@ -1,0 +1,7 @@
+SPARK 4.3.0
+>>> SELECT t.* FROM JSON_TABLE(
+     1 | 1 | a
+     2 | 2 | b
+>>> SELECT * FROM JSON_TABLE(
+     10 | True
+     20 | False

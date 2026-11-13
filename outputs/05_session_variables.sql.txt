@@ -1,0 +1,9 @@
+SPARK 4.0.5
+>>> CREATE OR REPLACE TEMP VIEW orders AS SELECT * FROM VALUES (1,'eu',10.0D),(2,'us',20.0D),(3,'eu',30.0D),(4,'us
+>>> DECLARE OR REPLACE VARIABLE threshold DOUBLE DEFAULT 15.0
+>>> SELECT id FROM orders WHERE amount > threshold ORDER BY id
+     2
+     3
+>>> SET VAR threshold = 25.0
+>>> SELECT id FROM orders WHERE amount > threshold ORDER BY id
+     3

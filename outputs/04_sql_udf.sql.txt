@@ -1,0 +1,12 @@
+SPARK 4.0.5
+>>> CREATE OR REPLACE TEMP VIEW orders AS SELECT * FROM VALUES (1,'eu',10.0D),(2,'us',20.0D),(3,'eu',30.0D),(4,'us
+>>> CREATE OR REPLACE TEMPORARY FUNCTION add_tax(x DOUBLE) RETURNS DOUBLE RETURN x * 1.18
+>>> SELECT id, add_tax(amount) AS gross FROM orders ORDER BY id
+     1 | 11.799999999999999
+     2 | 23.599999999999998
+     3 | 35.4
+     4 | 5.8999999999999995
+>>> CREATE OR REPLACE TEMPORARY FUNCTION big_orders(min_amt DOUBLE)
+>>> SELECT * FROM big_orders(20.0)
+     2 | 20.0
+     3 | 30.0

@@ -1,0 +1,11 @@
+SPARK 4.0.5
+>>> SET spark.sql.ansi.enabled
+     spark.sql.ansi.enabled | true
+>>> SELECT try_cast('abc' AS INT);          -- NULL
+     None
+>>> SELECT try_divide(1, 0);                -- NULL
+     None
+>>> SELECT CAST('abc' AS INT)
+    ERROR: [CAST_INVALID_INPUT] The value 'abc' of the type "STRING" cannot be cast to "INT" because it is malformed. Correct the value as per the syntax, or change its target type. Use `try_cast` to tolerate malformed input and return NULL instead. SQLSTATE: 22018 == SQL (line 1, position 8) == SELECT CAST('abc' AS INT) ^^^^^^^^^^^^^^^^^^
+>>> SELECT 1/0
+    ERROR: [DIVIDE_BY_ZERO] Division by zero. Use `try_divide` to tolerate divisor being 0 and return NULL instead. If necessary set "spark.sql.ansi.enabled" to "false" to bypass this error. SQLSTATE: 22012 == SQL (line 1, position 8) == SELECT 1/0 ^^^

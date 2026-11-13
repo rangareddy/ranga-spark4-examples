@@ -1,0 +1,4 @@
+Run is COMPLETED.
+Flow spark_catalog.default.orders is QUEUED.
+Flow spark_catalog.default.revenue_by_region is QUEUED.
+Run is COMPLETED.

@@ -1,0 +1,8 @@
+SPARK 4.0.5
+>>> CREATE OR REPLACE TEMP VIEW orders AS SELECT * FROM VALUES (1,'eu',10.0D),(2,'us',20.0D),(3,'eu',30.0D),(4,'us
+>>> FROM orders
+     eu | 40.0
+     us | 20.0
+>>> FROM orders |> EXTEND amount * 2 AS doubled |> SELECT id, doubled |> LIMIT 2
+     1 | 20.0
+     2 | 40.0

@@ -1,0 +1,11 @@
+SPARK 4.2.1
+>>> CREATE OR REPLACE TEMP VIEW pts AS SELECT * FROM VALUES ('q1',1.0D),('q2',9.0D) AS t(q,x)
+>>> CREATE OR REPLACE TEMP VIEW base AS SELECT * FROM VALUES ('a',0.0D),('b',2.0D),('c',8.0D),('d',20.0D) AS t(nam
+>>> SELECT q, x, name, y
+     q1 | 1.0 | a | 0.0
+     q1 | 1.0 | b | 2.0
+     q2 | 9.0 | c | 8.0
+     q2 | 9.0 | b | 2.0
+>>> SELECT q, name FROM pts JOIN base EXACT NEAREST BY DISTANCE abs(x - y) ORDER BY q
+     q1 | a
+     q2 | c

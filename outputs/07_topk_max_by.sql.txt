@@ -1,0 +1,4 @@
+SPARK 4.2.1
+>>> CREATE OR REPLACE TEMP VIEW orders AS SELECT * FROM VALUES (1,'eu',10.0D),(2,'us',20.0D),(3,'eu',30.0D),(4,'us
+>>> SELECT max_by(id, amount, 2) AS top2, min_by(id, amount, 2) AS bottom2 FROM orders
+     [3, 2] | [4, 1]

@@ -1,0 +1,7 @@
+SPARK 4.0.5
+>>> SELECT parse_json('{"a":1,"b":[1,2,3],"c":{"d":"x"}}') AS v
+     {"a":1,"b":[1,2,3],"c":{"d":"x"}}
+>>> SELECT variant_get(parse_json('{"a":1,"b":[1,2,3]}'), '$.b[1]', 'int')
+     2
+>>> SELECT schema_of_variant(parse_json('{"a":1,"b":[1,2,3]}'))
+     OBJECT<a: BIGINT, b: ARRAY<BIGINT>>

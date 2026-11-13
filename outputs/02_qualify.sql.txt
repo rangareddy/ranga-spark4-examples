@@ -1,0 +1,9 @@
+SPARK 4.2.1
+>>> CREATE OR REPLACE TEMP VIEW orders_t AS SELECT * FROM VALUES
+>>> SELECT id, region, amount FROM orders_t
+     3 | eu | 30.0
+     2 | us | 20.0
+>>> SELECT id, region, rank() OVER (PARTITION BY region ORDER BY amount DESC) AS r
+     2 | us | 1
+     3 | eu | 1
+     5 | eu | 1

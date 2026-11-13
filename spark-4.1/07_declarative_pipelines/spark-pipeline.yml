@@ -1,0 +1,5 @@
+name: orders_pipeline
+libraries:
+  - glob:
+      include: transformations/**
+storage: file:///tmp/sdp/storage

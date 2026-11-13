@@ -1,0 +1,8 @@
+SPARK 4.2.1
+>>> CREATE SCHEMA IF NOT EXISTS sales
+>>> DROP TABLE IF EXISTS sales.orders
+>>> CREATE TABLE sales.orders USING parquet AS
+>>> CREATE OR REPLACE VIEW sales.revenue_mv WITH METRICS LANGUAGE YAML AS $$
+>>> SELECT region, MEASURE(total_amount) AS total, MEASURE(order_count) AS n
+     eu | 70.0 | 3
+     us | 25.0 | 2

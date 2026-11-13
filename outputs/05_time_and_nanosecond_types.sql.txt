@@ -1,0 +1,11 @@
+SPARK 4.3.0
+>>> SET spark.sql.timeType.enabled = true
+     spark.sql.timeType.enabled | true
+>>> SET spark.sql.timestampNanosTypes.enabled = true
+     spark.sql.timestampNanosTypes.enabled | true
+>>> SELECT typeof(CAST('10:15:30.123456789' AS TIME(9)))
+     time(9)
+>>> SELECT CAST(CAST('2026-11-01 10:00:00.123456789' AS TIMESTAMP_NTZ(9)) AS STRING),
+     2026-11-01 10:00:00.123456789 | timestamp_ntz(9)
+>>> SELECT CAST('2026-11-01 10:00:00.123456789' AS TIMESTAMP_NTZ)
+     2026-11-01 10:00:00.123456

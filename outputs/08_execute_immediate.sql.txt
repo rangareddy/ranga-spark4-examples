@@ -1,0 +1,4 @@
+SPARK 4.0.5
+>>> CREATE OR REPLACE TEMP VIEW orders AS SELECT * FROM VALUES (1,'eu',10.0D),(2,'us',20.0D),(3,'eu',30.0D),(4,'us
+>>> EXECUTE IMMEDIATE 'SELECT count(*) FROM orders WHERE amount > ?' USING 8
+     3
