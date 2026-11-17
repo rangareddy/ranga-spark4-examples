@@ -40,6 +40,7 @@ statement at a time and prints errors instead of stopping, so a file can show a 
 | 4.0 | `07_xml_functions.sql` | XML functions | ran on 4.0.5 |
 | 4.0 | `08_execute_immediate.sql` | `EXECUTE IMMEDIATE` | ran on 4.0.5 |
 | 4.0 | `09_python_data_source.py` | Python data source and UDTF | ran on 4.0.5 with `pyarrow pandas` |
+| 4.0 | `10_group_by_map_describe_json.sql` | `GROUP BY` on maps, `DESCRIBE ... AS JSON` | ran on 4.3.0 (release tarball), not on 4.0.5 |
 | 4.1 | `01_sql_scripting.sql` | SQL scripting | ran on 4.1.3 |
 | 4.1 | `02_recursive_cte.sql` | Recursive CTEs | ran on 4.1.3 |
 | 4.1 | `03_variant_colon_paths.sql` | `VARIANT` colon paths | ran on 4.1.3 |
@@ -55,6 +56,8 @@ statement at a time and prints errors instead of stopping, so a file can show a 
 | 4.2 | `05_metric_views.sql` | Metric views | ran on 4.2.1 |
 | 4.2 | `06_time_bucket_ignore_nulls.sql` | `time_bucket`, `IGNORE NULLS` | ran on 4.2.1 |
 | 4.2 | `07_topk_max_by.sql` | Top-K `max_by`, `min_by` | ran on 4.2.1 |
+| 4.2 | `08_vector_functions.sql` | Vector similarity and distance functions | ran on 4.3.0 (release tarball), not on 4.2.1 |
+| 4.2 | `09_sql_cursors.sql` | Cursors in SQL scripts | ran on 4.3.0 with two internal flags set in the file, not on 4.2.1 |
 | 4.3 | `01_json_table.sql` | `JSON_TABLE` | ran on 4.3.0 |
 | 4.3 | `02_asof_join.sql` | `ASOF JOIN` | ran on 4.3.0 |
 | 4.3 | `03_unnest.sql` | `UNNEST` in `FROM` | ran on 4.3.0 |
@@ -63,5 +66,8 @@ statement at a time and prints errors instead of stopping, so a file can show a 
 | 4.3 | `06_new_functions.sql` | `counter_diff` and others | ran on 4.3.0 |
 | 4.3 | `07_stateful_real_time_mode.scala` | Stateful real-time mode | needs Kafka, not run by this repo |
 | 4.3 | `08_auto_cdc_scd2.sql` | Auto CDC SCD Type 2 | pipeline SQL; needs a connector with row-level `MERGE`, not run |
+| 4.3 | `09_bin_by.sql` | `BIN BY` | ran on 4.3.0 (release tarball) |
+| 4.3 | `10_archive_reader.sql` | Reading tar and zip archives | ran on 4.3.0 (release tarball); build `arc/data.tar` and `arc/data.zip` first, see the file header |
+| 4.3 | `11_dataframe_zip.scala` | `DataFrame.zip` | ran on 4.3.0 (release tarball) with `spark-shell -i` |
 
 Apache Spark, Apache Kafka, Apache Iceberg and Apache are trademarks of The Apache Software Foundation.
