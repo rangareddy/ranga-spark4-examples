@@ -1,0 +1,3 @@
+{"k":2}	1
+{"k":1}	2
+{"table_name":"people","catalog_name":"spark_catalog","namespace":["default"],"schema_name":"default","columns":[{"name":"id","type":{"name":"int"},"nullable":true},{"name":"name","type":{"name":"string","collation":"UTF8_BINARY"},"nullable":true}],"location":"file:/user/hive/warehouse/people","serde_library":"org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe","input_format":"org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat","output_format":"org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat","owner":"rangareddy","created_time":"2026-11-17T17:06:18Z","la
