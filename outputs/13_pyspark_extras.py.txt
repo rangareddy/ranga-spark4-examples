@@ -1,0 +1,6 @@
+NAMED [Row(s=3)]
+UNNAMED [Row(s=3)]
+SAFE [Row(s="x'; DROP TABLE t; --")]
+ECHO_INT struct<c1:int> [Row(c1=5)]
+ECHO_STR struct<c1:string>
+PLOT plotly.graph_objs._figure.Figure

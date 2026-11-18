@@ -1,0 +1,3 @@
+COUNTS [('0', 78), ('1', 78), ('2', 78)]
+STATE_SCHEMA struct<key:struct<id:string>,value:struct<value:int>,partition_id:int>
+STATE_ROWS [('0', 78), ('1', 78), ('2', 78)]

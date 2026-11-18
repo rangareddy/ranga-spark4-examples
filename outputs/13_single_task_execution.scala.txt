@@ -1,0 +1,3 @@
+OFF LocalTableScan > HashAggregate > Exchange > HashAggregate > Exchange > Sort
+ON  LocalTableScan > HashAggregate > Sort
+RESULT [eu,40.0] [us,25.0]
