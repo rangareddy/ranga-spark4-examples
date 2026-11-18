@@ -58,6 +58,8 @@ statement at a time and prints errors instead of stopping, so a file can show a 
 | 4.2 | `07_topk_max_by.sql` | Top-K `max_by`, `min_by` | ran on 4.2.1 |
 | 4.2 | `08_vector_functions.sql` | Vector similarity and distance functions | ran on 4.3.0 (release tarball), not on 4.2.1 |
 | 4.2 | `09_sql_cursors.sql` | Cursors in SQL scripts | ran on 4.3.0 with two internal flags set in the file, not on 4.2.1 |
+| 4.2 | `10_changes_clause.sql` | The `CHANGES` clause on a built-in table | ran on 4.3.0 (release tarball); fails with `UNSUPPORTED_FEATURE.CHANGE_DATA_CAPTURE` by design |
+| 4.2 | `11_vector_similarity_join.sql` | `NEAREST BY` with `vector_cosine_similarity` | ran on 4.3.0 (release tarball), not on 4.2.1 |
 | 4.3 | `01_json_table.sql` | `JSON_TABLE` | ran on 4.3.0 |
 | 4.3 | `02_asof_join.sql` | `ASOF JOIN` | ran on 4.3.0 |
 | 4.3 | `03_unnest.sql` | `UNNEST` in `FROM` | ran on 4.3.0 |

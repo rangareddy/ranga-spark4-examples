@@ -1,0 +1,1 @@
+[UNSUPPORTED_FEATURE.CHANGE_DATA_CAPTURE] The feature is not supported: Catalog spark_catalog does not support Change Data Capture (CDC). SQLSTATE: 0A000
