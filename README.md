@@ -78,7 +78,8 @@ statement at a time and prints errors instead of stopping, so a file can show a 
 | 4.3 | `09_bin_by.sql` | `BIN BY` | ran on 4.3.0 (release tarball) |
 | 4.3 | `10_archive_reader.sql` | Reading tar and zip archives | ran on 4.3.0 (release tarball); build `arc/data.tar` and `arc/data.zip` first, see the file header |
 | 4.3 | `11_dataframe_zip.scala` | `DataFrame.zip` | ran on 4.3.0 (release tarball) with `spark-shell -i` |
-| 4.3 | `12_before_after.sql` | `from_json` + `explode` and `posexplode` next to `JSON_TABLE` and `UNNEST` | ran on 4.3.0 (release tarball) |
+| 4.3 | `12_before_after.sql` | the older forms of `JSON_TABLE`, `UNNEST`, `ASOF JOIN`, `VARIANT` editing, `BIN BY` and the timestamp cast | ran on 4.3.0 (release tarball) |
+| 4.3 | `14_before_dataframe_zip.scala` | the window-and-join form that `DataFrame.zip` replaces | ran on 4.3.0 (release tarball) |
 
 Apache Spark, Apache Kafka, Apache Iceberg and Apache are trademarks of The Apache Software Foundation.
 
