@@ -73,3 +73,7 @@ statement at a time and prints errors instead of stopping, so a file can show a 
 | 4.3 | `11_dataframe_zip.scala` | `DataFrame.zip` | ran on 4.3.0 (release tarball) with `spark-shell -i` |
 
 Apache Spark, Apache Kafka, Apache Iceberg and Apache are trademarks of The Apache Software Foundation.
+
+## Running on release tarballs
+
+To run the examples on the plain Apache release tarballs instead of Docker, with the download and checksum script, the SQL runner, one smoke test per release, the PySpark scripts and the Kafka real-time scripts, see [RUNNING_ON_TARBALLS.md](RUNNING_ON_TARBALLS.md).
