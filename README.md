@@ -60,6 +60,7 @@ statement at a time and prints errors instead of stopping, so a file can show a 
 | 4.2 | `09_sql_cursors.sql` | Cursors in SQL scripts | ran on 4.3.0 with two internal flags set in the file, not on 4.2.1 |
 | 4.2 | `10_changes_clause.sql` | The `CHANGES` clause on a built-in table | ran on 4.3.0 (release tarball); fails with `UNSUPPORTED_FEATURE.CHANGE_DATA_CAPTURE` by design |
 | 4.2 | `11_vector_similarity_join.sql` | `NEAREST BY` with `vector_cosine_similarity` | ran on 4.3.0 (release tarball), not on 4.2.1 |
+| 4.3 | `00_hello_world.sql` | `SELECT version()`, the smallest check that you are on 4.3 | ran on 4.3.0 (release tarball) |
 | 4.3 | `01_json_table.sql` | `JSON_TABLE` | ran on 4.3.0 |
 | 4.3 | `02_asof_join.sql` | `ASOF JOIN` | ran on 4.3.0 |
 | 4.3 | `03_unnest.sql` | `UNNEST` in `FROM` | ran on 4.3.0 |
@@ -71,6 +72,7 @@ statement at a time and prints errors instead of stopping, so a file can show a 
 | 4.3 | `09_bin_by.sql` | `BIN BY` | ran on 4.3.0 (release tarball) |
 | 4.3 | `10_archive_reader.sql` | Reading tar and zip archives | ran on 4.3.0 (release tarball); build `arc/data.tar` and `arc/data.zip` first, see the file header |
 | 4.3 | `11_dataframe_zip.scala` | `DataFrame.zip` | ran on 4.3.0 (release tarball) with `spark-shell -i` |
+| 4.3 | `12_before_after.sql` | `from_json` + `explode` and `posexplode` next to `JSON_TABLE` and `UNNEST` | ran on 4.3.0 (release tarball) |
 
 Apache Spark, Apache Kafka, Apache Iceberg and Apache are trademarks of The Apache Software Foundation.
 
