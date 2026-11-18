@@ -1,5 +1,5 @@
 -- Top-K similarity search in plain SQL: NEAREST BY (SPARK-56395) driven by vector_cosine_similarity (SPARK-54713).
--- Run for this post on Spark 4.3.0, the release tarball. Both features were introduced in 4.2.0.
+-- Run on apache/spark:4.2.1-python3, and also on the 4.3.0 release tarball. Both features were introduced in 4.2.0.
 CREATE OR REPLACE TEMP VIEW queries AS
 SELECT * FROM VALUES ('q1', ARRAY(1.0F, 0.0F)), ('q2', ARRAY(0.0F, 1.0F)) AS queries(q, qe);
 CREATE OR REPLACE TEMP VIEW docs AS
