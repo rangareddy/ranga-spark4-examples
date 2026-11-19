@@ -1,3 +1,4 @@
+# Ran on 4.3.0 (pyspark 4.3.0, spark-shell -i). The first two zips work: same plan, different projections.
 +---+-------+
 | id|tenfold|
 +---+-------+
@@ -13,3 +14,7 @@
 |  1|  1|
 |  2|  2|
 +---+---+
+# Anything that is not a projection of the same plan fails:
+different length: [ZIP_PLANS_NOT_MERGEABLE] The two DataFrames in zip() cannot be merged
+unrelated source: [ZIP_PLANS_NOT_MERGEABLE] The two DataFrames in zip() cannot be merged
+repartitioned copy: [ZIP_PLANS_NOT_MERGEABLE] The two DataFrames in zip() cannot be merged

@@ -1,0 +1,4 @@
+# Ran on 4.3.0 against a local Connect server (pyspark 4.3.0 start-connect-server.sh, UI on port 4041)
+operation_id: 26cf7b46-f39c-4ed1-aa7d-c43b84abca88
+sessions -> 1 row(s); keys: ['finishTimestamp', 'sessionId', 'startTimestamp', 'totalExecution', 'totalTime', 'userId']
+operations -> 2 row(s); keys: ['closeTimestamp', 'detail', 'duration', 'executionTime', 'finishTimestamp', 'jobIds', 'jobTag', 'operationId', 'sessionId', 'sparkSessionTags', 'sqlExecIds', 'startTimestamp', 'state', 'statement', 'userId']

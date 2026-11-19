@@ -1,0 +1,5 @@
+name: cdc_scd2
+libraries:
+  - glob:
+      include: transformations/**
+storage: file:///tmp/sdp_cdc/storage

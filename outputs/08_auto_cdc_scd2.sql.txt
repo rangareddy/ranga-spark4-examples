@@ -1,0 +1,3 @@
+# Ran on 4.3.0 as the pipeline in spark-4.3/08_auto_cdc_scd2 (default Parquet catalog). The SQL, also with TRACK HISTORY ON (city), parses and plans, then:
+[AUTOCDC_TARGET_DOES_NOT_SUPPORT_MERGE] Cannot start AutoCDC flow: the target table `spark_catalog`.`default`.`customers_history` (format: parquet) does not support row-level operations. AutoCDC requires a target backed by a connector that supports MERGE. SQLSTATE: 0A000
+# The SCD Type 2 rows were not produced: Iceberg 1.12.0 for Spark 4.1 fails to load on 4.3.0 (SparkView can not implement View).
