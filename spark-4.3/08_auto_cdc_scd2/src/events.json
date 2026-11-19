@@ -1,0 +1,4 @@
+{"id":1,"city":"Pune","version":1,"op":"UPSERT"}
+{"id":1,"city":"Delhi","version":2,"op":"UPSERT"}
+{"id":2,"city":"Goa","version":1,"op":"UPSERT"}
+{"id":2,"city":"Goa","version":2,"op":"DELETE"}

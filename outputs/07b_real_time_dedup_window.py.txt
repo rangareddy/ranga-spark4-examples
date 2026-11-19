@@ -1,0 +1,11 @@
+# Ran on 4.3.0 (spark-submit, local[8], Python 3.11 workers, Kafka on localhost:9092); e1 sent twice, e2 and e3 once.
+Batch: 0
++--------------------+-----+-----+
+|              window|aisle|count|
++--------------------+-----+-----+
+|{2026-11-01 10:00...| milk|    1|
+|{2026-11-01 10:00...| milk|    2|
+|{2026-11-01 10:00...| eggs|    1|
++--------------------+-----+-----+
+exception = None
+# local[4] with 2 shuffle partitions: needs 5 concurrent task slots, only 4 free -> CONCURRENT_SCHEDULER_INSUFFICIENT_SLOT

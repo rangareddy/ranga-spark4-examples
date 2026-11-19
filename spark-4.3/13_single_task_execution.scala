@@ -1,4 +1,4 @@
-// Project Feather: opt-in single-task execution for small queries (SPARK-57851).
+// Opt-in single-task execution for small queries (SPARK-57851), part of the SPIP SPARK-56978 "Faster queries in local laptop mode".
 // Run on apache/spark:4.3.0-python3 with spark-shell, feeding this file on standard input.
 def operators(sql: String): String = {
   val plan = spark.sql("EXPLAIN FORMATTED " + sql).collect().map(_.getString(0)).mkString("\n")

@@ -1,0 +1,16 @@
+# Ran on 4.3.0 (pyspark 4.3.0 spark-shell, local[4], Kafka on localhost:9092). Producing a, b, a, a printed, in one batch:
+Batch: 2
++----+-----+
+|word|count|
++----+-----+
+|   a|    1|
+|   a|    2|
+|   a|    3|
+|   b|    1|
++----+-----+
+# exception=None
+# With the default 200 shuffle partitions on local[2]:
+[CONCURRENT_SCHEDULER_INSUFFICIENT_SLOT] Cannot run the pipelined stage group: it needs 201 concurrent task slots to run all its stages together, but only 2 are currently free.
+# With spark.sql.shuffle.partitions=4 on local[4] (1 reader task + 4 = 5 slots needed):
+[CONCURRENT_SCHEDULER_INSUFFICIENT_SLOT] ... it needs 5 concurrent task slots ... but only 4 are currently free.
+# Micro-batch trigger (Trigger.ProcessingTime) on the same query: one batch with a 3, b 1.

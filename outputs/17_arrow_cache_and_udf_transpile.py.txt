@@ -1,0 +1,10 @@
+# Ran on 4.3.0 (pyspark 4.3.0, Python 3.11)
+cached rows: 5
++---+
+|  n|
++---+
+|  3|
+|  5|
++---+
+plan has a PythonUDF node: False
+NULL guard in plan: True

@@ -73,13 +73,19 @@ statement at a time and prints errors instead of stopping, so a file can show a 
 | 4.3 | `04_variant_editing.sql` | `VARIANT` editing functions | ran on 4.3.0 |
 | 4.3 | `05_time_and_nanosecond_types.sql` | `TIME(p)`, nanosecond timestamps | ran on 4.3.0 |
 | 4.3 | `06_new_functions.sql` | `counter_diff` and others | ran on 4.3.0 |
-| 4.3 | `07_stateful_real_time_mode.scala` | Stateful real-time mode | needs Kafka, not run by this repo |
-| 4.3 | `08_auto_cdc_scd2.sql` | Auto CDC SCD Type 2 | pipeline SQL; needs a connector with row-level `MERGE`, not run |
+| 4.3 | `07_stateful_real_time_mode.scala` | Stateful real-time mode (running count) | ran on 4.3.0 with Kafka on localhost:9092 (`BOOT`, `TOPIC` override) |
+| 4.3 | `07b_real_time_dedup_window.py` | PySpark real-time query with watermark, `dropDuplicates` and a windowed count | ran on 4.3.0 with Kafka |
+| 4.3 | `08_auto_cdc_scd2.sql`, `08_auto_cdc_scd2/` | Auto CDC SCD Type 2, as a complete pipeline | parses and plans on 4.3.0; stops with `AUTOCDC_TARGET_DOES_NOT_SUPPORT_MERGE` on Parquet; the SCD rows need a MERGE-capable connector for 4.3, see its README |
 | 4.3 | `09_bin_by.sql` | `BIN BY` | ran on 4.3.0 (release tarball) |
-| 4.3 | `10_archive_reader.sql` | Reading tar and zip archives | ran on 4.3.0 (release tarball); build `arc/data.tar` and `arc/data.zip` first, see the file header |
-| 4.3 | `11_dataframe_zip.scala` | `DataFrame.zip` | ran on 4.3.0 (release tarball) with `spark-shell -i` |
+| 4.3 | `10_archive_reader.sql` | Reading tar and zip archives | ran on 4.3.0; run `./10_make_archives.sh` first |
+| 4.3 | `11_dataframe_zip.scala` | `DataFrame.zip`, and the `ZIP_PLANS_NOT_MERGEABLE` cases | ran on 4.3.0 with `spark-shell -i` |
 | 4.3 | `12_before_after.sql` | the older forms of `JSON_TABLE`, `UNNEST`, `ASOF JOIN`, `VARIANT` editing, `BIN BY` and the timestamp cast | ran on 4.3.0 (release tarball) |
+| 4.3 | `13_single_task_execution.scala` | Single-task execution for small queries | ran on 4.3.0 |
 | 4.3 | `14_before_dataframe_zip.scala` | the window-and-join form that `DataFrame.zip` replaces | ran on 4.3.0 (release tarball) |
+| 4.3 | `15_asof_feature_versions.sql` | `ASOF JOIN` against feature versions | ran on 4.3.0 |
+| 4.3 | `16_connect_operation_ids.py` | Spark Connect operation id and the REST endpoints | ran on 4.3.0 against a local Connect server |
+| 4.3 | `17_arrow_cache_and_udf_transpile.py` | Arrow-native cache serializer and Python UDF transpiling | ran on 4.3.0 |
+| 4.3 | `18_check_maven_artifacts.py` | Check that connector artifacts exist for 4.3.0 | ran against Maven Central |
 
 Apache Spark, Apache Kafka, Apache Iceberg and Apache are trademarks of The Apache Software Foundation.
 
