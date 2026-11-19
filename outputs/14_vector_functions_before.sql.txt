@@ -1,0 +1,5 @@
+SPARK 4.2.1
+>>> SELECT aggregate(zip_with(ARRAY(1.0F, 2.0F), ARRAY(3.0F, 4.0F), (x, y) -> x * y),
+     11.0
+>>> WITH t AS (SELECT ARRAY(1.0F, 0.0F) AS a, ARRAY(1.0F, 1.0F) AS b)
+     0.7071067811865475

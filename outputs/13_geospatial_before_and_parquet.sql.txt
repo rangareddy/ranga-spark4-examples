@@ -1,0 +1,7 @@
+SPARK 4.2.1
+>>> CREATE OR REPLACE TEMP VIEW pt AS SELECT X'0101000000000000000000F03F0000000000000040' AS wkb
+>>> SELECT typeof(wkb) FROM pt;   -- binary
+     binary
+>>> INSERT OVERWRITE DIRECTORY '/tmp/geo_pq' USING parquet
+>>> SELECT id, typeof(g), ST_SRID(g) FROM parquet.`/tmp/geo_pq`;   -- 1  geometry(4326)  4326
+     1 | geometry(4326) | 4326

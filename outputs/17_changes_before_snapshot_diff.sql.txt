@@ -1,0 +1,6 @@
+SPARK 4.2.1
+>>> CREATE OR REPLACE TEMP VIEW snap_v1 AS SELECT * FROM VALUES (1, 'a'), (2, 'b') AS t(id, data)
+>>> CREATE OR REPLACE TEMP VIEW snap_v2 AS SELECT * FROM VALUES (1, 'a'), (3, 'c') AS t(id, data)
+>>> SELECT 'insert' AS change, * FROM (SELECT * FROM snap_v2 EXCEPT SELECT * FROM snap_v1)
+     delete | 2 | b
+     insert | 3 | c

@@ -1,0 +1,11 @@
+SPARK 4.2.1
+>>> SELECT * FROM VALUES (1, 'eu', 10.0D), (2, 'us', 20.0D), (3, 'eu', 30.0D) AS t(id, region, amount)
+     eu | 40.0
+     us | 20.0
+>>> SELECT * FROM (SELECT * FROM VALUES ('a', 'x', 1), ('a', 'y', 2), ('b', 'x', 3) AS t(k, c, v))
+     a | 1 | 2
+     b | 3 | None
+>>> CREATE VIEW v1 AS SELECT 1 AS a
+>>> DROP TABLE v1
+>>> SELECT max_by(name, score, 2) FROM VALUES ('a', 1), ('b', 3), ('c', 2) AS t(name, score)
+     ['b', 'c']

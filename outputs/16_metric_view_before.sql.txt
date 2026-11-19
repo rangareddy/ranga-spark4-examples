@@ -1,0 +1,7 @@
+SPARK 4.2.1
+>>> CREATE SCHEMA IF NOT EXISTS sales
+>>> DROP TABLE IF EXISTS sales.orders
+>>> CREATE TABLE sales.orders USING parquet AS
+>>> SELECT region, sum(amount) AS total, count(1) AS n
+     eu | 70.0 | 3
+     us | 25.0 | 2

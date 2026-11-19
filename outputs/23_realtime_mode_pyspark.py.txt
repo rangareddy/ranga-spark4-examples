@@ -1,0 +1,6 @@
+micro-batch trigger, one batch with both ERROR records:
+ERROR disk full
+ERROR timeout
+real-time trigger, one batch with both ERROR records (row order can vary):
+ERROR timeout
+ERROR disk full

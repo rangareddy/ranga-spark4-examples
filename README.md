@@ -66,6 +66,20 @@ statement at a time and prints errors instead of stopping, so a file can show a 
 | 4.2 | `10_changes_clause.sql` | The `CHANGES` clause on a built-in table | ran on 4.2.1 and on 4.3.0; fails with `UNSUPPORTED_FEATURE.CHANGE_DATA_CAPTURE` by design |
 | 4.2 | `11_vector_similarity_join.sql` | `NEAREST BY` with `vector_cosine_similarity` | ran on 4.2.1 and on 4.3.0 |
 | 4.2 | `12_before_after.sql` | `QUALIFY`, `NEAREST BY` and `time_bucket` next to their older forms | ran on 4.2.1 |
+| 4.2 | `13_geospatial_before_and_parquet.sql` | The `BINARY` form before `GEOMETRY`, and Parquet written by path with the SRID kept | ran on 4.2.1 |
+| 4.2 | `14_vector_functions_before.sql` | The array arithmetic that the vector functions replace | ran on 4.2.1 |
+| 4.2 | `15_set_path_before.sql` | A fully qualified name, the form `SET PATH` replaces | ran on 4.2.1 |
+| 4.2 | `16_metric_view_before.sql` | The aggregation copied into every report | ran on 4.2.1 |
+| 4.2 | `17_changes_before_snapshot_diff.sql` | A snapshot diff with `EXCEPT`, the form `CHANGES` replaces | ran on 4.2.1 |
+| 4.2 | `18_changes_clause_catalog.scala` | `CHANGES` succeeding on Spark's in-memory test catalog (needs the `spark-catalyst` tests jar) | ran on 4.2.1 |
+| 4.2 | `19_auto_cdc_scd1_merge_before.sql` | The latest-event and `MERGE` form that Auto CDC replaces (needs the tests jar and a row-level catalog) | ran on 4.2.1 |
+| 4.2 | `20_auto_cdc_scd1_pipeline.py` | Auto CDC with SCD Type 1 in a pipeline definition | pipeline code; the expected result is from Spark's own test |
+| 4.2 | `21_cursor_before.py` | A Python loop over collected rows, the form cursors replace | ran on 4.2.1 |
+| 4.2 | `22_arrow_udf_default.py` | Arrow Python UDFs by default, and the old path | ran on 4.2.1 with `--pip "pyarrow pandas"` |
+| 4.2 | `23_realtime_mode_pyspark.py` | Real-time mode from PySpark, next to the micro-batch trigger | ran on 4.2.1 with Kafka on localhost:9092 |
+| 4.2 | `24_pipe_and_small_additions.sql` | Pipe `|` and `AGGREGATE`, `PIVOT` alias, `DROP TABLE` on a view, top-K `max_by` | ran on 4.2.1 |
+| 4.2 | `25_zip_with_index.py` | `DataFrame.zipWithIndex` | ran on 4.2.1 |
+| 4.2 | `26_check_maven_artifacts.py` | Check connector artifacts for 4.2.1 on Maven Central | ran against Maven Central |
 | 4.3 | `00_hello_world.sql` | `SELECT version()`, the smallest check that you are on 4.3 | ran on 4.3.0 (release tarball) |
 | 4.3 | `01_json_table.sql` | `JSON_TABLE` | ran on 4.3.0 |
 | 4.3 | `02_asof_join.sql` | `ASOF JOIN` | ran on 4.3.0 |

@@ -1,0 +1,3 @@
+Pipeline definition; the expected result comes from AutoCdcScd1SinglePipelineSuite in the Spark source:
+id  name    version
+1   alice2  3
