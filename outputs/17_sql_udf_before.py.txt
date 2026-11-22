@@ -1,0 +1,15 @@
+== Physical Plan ==
+*(2) Project [id#7, pythonUDF0#11 AS gross#3]
++- BatchEvalPython [add_tax_py(amount#9)#10], [pythonUDF0#11]
+   +- *(1) Project [id#7, amount#9]
+      +- *(1) LocalTableScan [id#7, region#8, amount#9]
+== Physical Plan ==
+LocalTableScan [id#18, gross#14]
++---+------------------+
+| id|             gross|
++---+------------------+
+|  1|11.799999999999999|
+|  2|23.599999999999998|
+|  3|              35.4|
+|  4|5.8999999999999995|
++---+------------------+

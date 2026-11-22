@@ -1,0 +1,5 @@
+SPARK 4.0.5
+>>> CREATE OR REPLACE TEMP VIEW orders AS SELECT * FROM VALUES (1,'eu',10.0D),(2,'us',20.0D),(3,'eu',30.0D),(4,'us
+>>> SELECT region, sum(amount) AS total FROM orders WHERE amount > 5 GROUP BY region ORDER BY total DESC
+     eu | 40.0
+     us | 20.0

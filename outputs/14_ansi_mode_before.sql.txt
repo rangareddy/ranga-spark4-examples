@@ -1,0 +1,7 @@
+SPARK 4.0.5
+>>> SET spark.sql.ansi.enabled=false
+     spark.sql.ansi.enabled | false
+>>> SELECT CAST('abc' AS INT) AS bad_cast, 1/0 AS div_zero;    -- NULL, NULL
+     None | None
+>>> SET spark.sql.ansi.enabled=true
+     spark.sql.ansi.enabled | true

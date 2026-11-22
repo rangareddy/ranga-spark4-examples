@@ -43,6 +43,16 @@ statement at a time and prints errors instead of stopping, so a file can show a 
 | 4.0 | `09_python_data_source.py` | Python data source and UDTF | ran on 4.0.5 with `pyarrow pandas` |
 | 4.0 | `10_group_by_map_describe_json.sql` | `GROUP BY` on maps, `DESCRIBE ... AS JSON` | ran on 4.0.5 and on 4.3.0 |
 | 4.0 | `11_before_after.sql` | Pipe syntax, collation, `VARIANT` and ANSI mode next to their older forms | ran on 4.0.5 |
+| 4.0 | `14_ansi_mode_before.sql` | The 3.x default: ANSI off, bad data becomes NULL | ran on 4.0.5 |
+| 4.0 | `15_variant_before.sql` | `get_json_object` returns a string, `variant_get` returns a typed value | ran on 4.0.5 |
+| 4.0 | `16_pipe_syntax_before.sql` | The conventional query next to its pipe-syntax form | ran on 4.0.5 |
+| 4.0 | `17_sql_udf_before.py` | A Python UDF next to a SQL UDF, with the plan of each | ran on 4.0.5 |
+| 4.0 | `18_session_variables_before.sql` | `SET` plus `${var}` text substitution | ran on 4.0.5 |
+| 4.0 | `19_collation_before.sql` | `lower()` on both sides | ran on 4.0.5 |
+| 4.0 | `20_xml_before.sql` | `xpath_*` one value at a time | ran on 4.0.5 |
+| 4.0 | `21_python_data_source_before.py` | A driver-side list passed to `createDataFrame` | ran on 4.0.5 |
+| 4.0 | `22_group_by_map_before.sql` | `to_json(m)` as the grouping key | ran on 4.0.5 |
+| 4.0 | `23_check_maven_artifacts.py` | Check connector artifacts for 4.0.5 on Maven Central | ran against Maven Central |
 | 4.1 | `00_hello_world.sql` | `SELECT version()`, the smallest check that you are on 4.1 | ran on 4.1.3 |
 | 4.1 | `01_sql_scripting.sql` | SQL scripting | ran on 4.1.3 |
 | 4.1 | `02_recursive_cte.sql` | Recursive CTEs | ran on 4.1.3 |

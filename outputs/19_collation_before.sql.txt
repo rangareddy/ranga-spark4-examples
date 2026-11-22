@@ -1,0 +1,6 @@
+SPARK 4.0.5
+>>> CREATE OR REPLACE TEMP VIEW names AS SELECT * FROM VALUES ('Ana'),('ana'),('ANA'),('Bob') AS t(n)
+>>> SELECT lower('Apple') = lower('apple') AS eq
+     True
+>>> SELECT count(DISTINCT lower(n)) FROM names
+     2

@@ -1,0 +1,4 @@
+SPARK 4.0.5
+>>> SELECT to_json(m) AS m, count(*) AS n
+     {"k":2} | 1
+     {"k":1} | 2
