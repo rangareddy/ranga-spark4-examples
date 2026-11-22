@@ -19,7 +19,7 @@ You need Docker. From the repo root:
 | Release | Image used by `run.sh` |
 |:--|:--|
 | 4.0 | `apache/spark:4.0.5-python3` |
-| 4.1 | `rangareddy1988/ranga-spark4:latest` (Spark 4.1.3) |
+| 4.1 | `apache/spark:4.1.4-python3` |
 | 4.2 | `apache/spark:4.2.1-python3` |
 | 4.3 | `apache/spark:4.3.0-python3` |
 
@@ -53,6 +53,16 @@ statement at a time and prints errors instead of stopping, so a file can show a 
 | 4.1 | `07_declarative_pipelines/` | Declarative Pipelines | ran on 4.2.1 (`outputs/07_declarative_pipelines.4.2.txt`); the 4.1 image is not run here |
 | 4.1 | `08_real_time_mode.scala` | Real-time mode, stateless | needs Kafka, not run by this repo |
 | 4.1 | `09_before_after.sql` | `variant_get` next to the colon path | ran on 4.1.3 |
+| 4.1 | `10_declarative_pipeline_before.py` | The driver script that creates tables in order, the form Declarative Pipelines replace | ran on 4.1.4 |
+| 4.1 | `11_real_time_before_and_after.scala` | The micro-batch trigger next to `Trigger.RealTime`, stateless | ran on 4.1.4 with Kafka on localhost:9092 |
+| 4.1 | `12_sql_scripting_before.py` | A Python loop around SQL, the form scripting replaces | ran on 4.1.4 |
+| 4.1 | `13_recursive_cte_before.py` | A loop of joins with a fixed depth | ran on 4.1.4 |
+| 4.1 | `14_variant_before.sql` | `variant_get` with a path and a type | ran on 4.1.4 |
+| 4.1 | `15_parameter_markers_before.py` | Building the statement as a string | ran on 4.1.4 |
+| 4.1 | `16_sketches_before.sql` | An exact distinct count over the combined rows | ran on 4.1.4 |
+| 4.1 | `17_arrow_udf_before_pandas.py` | A pandas UDF | ran on 4.1.4 with `--pip "pyarrow pandas"` |
+| 4.1 | `18_recursion_limit_and_new_functions.sql` | `chr`, `try_to_date`, seeded `uuid` and the recursion limit error | ran on 4.1.4 |
+| 4.1 | `19_check_maven_artifacts.py` | Check connector artifacts for 4.1.4 on Maven Central | ran against Maven Central |
 | 4.2 | `00_hello_world.sql` | `SELECT version()`, the smallest check that you are on 4.2 | ran on 4.2.1 |
 | 4.2 | `01_geospatial_types.sql` | `GEOMETRY` and `GEOGRAPHY` | ran on 4.2.1 |
 | 4.2 | `02_qualify.sql` | `QUALIFY` | ran on 4.2.1 |

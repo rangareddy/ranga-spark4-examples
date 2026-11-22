@@ -1,0 +1,5 @@
+SPARK 4.1.4
+>>> CREATE OR REPLACE TEMP VIEW ev AS SELECT parse_json(j) v FROM VALUES
+>>> SELECT variant_get(v, '$.user', 'string') AS user,
+     a | x
+     b | None

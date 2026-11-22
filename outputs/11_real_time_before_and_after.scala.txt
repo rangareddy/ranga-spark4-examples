@@ -1,0 +1,6 @@
+micro-batch trigger, one batch with both records:
+HELLO
+WORLD
+real-time trigger, the same records:
+HELLO
+WORLD

@@ -1,0 +1,3 @@
+SPARK 4.1.4
+>>> SELECT count(DISTINCT x) FROM (
+     4

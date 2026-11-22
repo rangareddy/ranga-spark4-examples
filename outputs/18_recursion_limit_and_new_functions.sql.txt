@@ -1,0 +1,5 @@
+SPARK 4.1.4
+>>> SELECT chr(65) AS c, try_to_date('not a date') AS d, uuid(42) = uuid(42) AS same
+     A | None | True
+>>> WITH RECURSIVE t(n) AS (SELECT 1 UNION ALL SELECT n + 1 FROM t) SELECT count(*) FROM t
+    ERROR: An error occurred while calling o35.collectToPython. : org.apache.spark.SparkException: [RECURSION_LEVEL_LIMIT_EXCEEDED] Recursion level limit 100 reached but query has not exhausted, try increasing it like 'WITH RECURSIVE t(col) MAX RECURSION LEVEL 200'. SQLSTATE: 42836 at org.apache.spark.sql.execution.UnionLoopExec.doExecute(UnionLoopExec.scala:240) at org.apache.spark.sql.execution.SparkPlan.$

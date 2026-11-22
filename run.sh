@@ -9,7 +9,7 @@ pip_pkgs=""
 if [ "${1:-}" = "--pip" ]; then pip_pkgs="$2"; fi
 case "$rel" in
   4.0) image="apache/spark:4.0.5-python3" ;;
-  4.1) image="rangareddy1988/ranga-spark4:latest" ;;
+  4.1) image="apache/spark:4.1.4-python3" ;;
   4.2) image="apache/spark:4.2.1-python3" ;;
   4.3) image="apache/spark:4.3.0-python3" ;;
   *) echo "release must be 4.0, 4.1, 4.2 or 4.3"; exit 1 ;;

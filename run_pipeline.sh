@@ -3,7 +3,7 @@
 set -euo pipefail
 rel="${1:-4.1}"
 case "$rel" in
-  4.1) image="apache/spark:4.1.3-python3" ;;
+  4.1) image="apache/spark:4.1.4-python3" ;;
   4.2) image="apache/spark:4.2.1-python3" ;;
   4.3) image="apache/spark:4.3.0-python3" ;;
   *) echo "pipelines need 4.1, 4.2 or 4.3"; exit 1 ;;
